@@ -58,6 +58,9 @@
 
 ---
 
-<p align="center"><a href="https://shamirkhannabil.com">shamirkhannabil.com</a> · <a href="mailto:nabil.shamir@innov8advisory.com.au">nabil.shamir@innov8advisory.com.au</a></p>
+<p align="center">
+<a href="https://shamirkhannabil.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-website-light.svg"><img src="assets/button-website-light.svg" height="48" alt="Website"></picture></a>
+<a href="mailto:nabil.shamir@innov8advisory.com.au"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-email-dark.svg"><img src="assets/button-email-light.svg" height="48" alt="Email"></picture></a>
+</p>
 
-<p align="center"><sub>© Shamirkhan Nabil · Innov8 Advisory</sub></p>
+<p align="center"><sub>© Shamirkhan Nabil</sub></p>

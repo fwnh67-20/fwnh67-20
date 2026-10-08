@@ -150,12 +150,12 @@ class Canvas:
     def mark(self) -> int:
         return len(self.parts)
 
-    def rect(self, x, y, w, h, fill, radius=0, at=None, stroke=None):
+    def rect(self, x, y, w, h, fill, radius=0, at=None, stroke=None, stroke_width=1):
         attrs = f'x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" fill="{fill}"'
         if radius:
             attrs += f' rx="{radius}"'
         if stroke:
-            attrs += f' stroke="{stroke}"'
+            attrs += f' stroke="{stroke}" stroke-width="{stroke_width}"'
         element = f"<rect {attrs}/>"
         if at is None:
             self.parts.append(element)
@@ -542,6 +542,22 @@ def credentials(theme: str, layout: str) -> tuple[str, str]:
     return c.svg(y + 8, alt), alt
 
 
+def button(theme: str, label: str, variant: str) -> str:
+    """A pill button: blue-bright fill for primary, 2px interactive-primary outline otherwise."""
+    c = Canvas(0, theme)
+    size, height, pad = 16, 48, 26
+    width = round(measure(label, "bold", size) + pad * 2)
+    c.width = width
+    if variant == "primary":
+        c.rect(0, 0, width, height, "#8ecbff", radius=height / 2)
+        ink = "#0a2a4d"
+    else:
+        ink = c.t["control"]
+        c.rect(1, 1, width - 2, height - 2, "none", radius=(height - 2) / 2, stroke=ink, stroke_width=2)
+    c.text(width / 2, baseline(0, "bold", size, height), label, "bold", size, ink, "middle")
+    return c.svg(height, label)
+
+
 SECTIONS = {
     "hero": hero,
     "practice": practice,
@@ -570,6 +586,14 @@ def picture(base: str, name: str, alt: str, themed: bool = True) -> str:
     )
 
 
+def button_picture(key: str, label: str, themed: bool) -> str:
+    dark = f"assets/button-{key}-{'dark' if themed else 'light'}.svg"
+    return (
+        f'<picture><source media="(prefers-color-scheme: dark)" srcset="{dark}">'
+        f'<img src="assets/button-{key}-light.svg" height="48" alt="{esc(label)}"></picture>'
+    )
+
+
 def readme(alts: dict[str, str], shared: set[str]) -> str:
     person, profile = CONTENT["person"], CONTENT["profile"]
     activity_base = f"https://raw.githubusercontent.com/{profile['repository']}/{profile['activityBranch']}/"
@@ -585,9 +609,11 @@ def readme(alts: dict[str, str], shared: set[str]) -> str:
         picture("assets/", "engagements", alts["engagements"], "engagements" not in shared),
         picture("assets/", "credentials", alts["credentials"], "credentials" not in shared),
         "---",
-        f'<p align="center"><a href="{person["website"]}">{person["website"].removeprefix("https://")}</a>'
-        f' · <a href="mailto:{person["email"]}">{person["email"]}</a></p>',
-        f'<p align="center"><sub>© {person["name"]} · {person["practice"]}</sub></p>',
+        '<p align="center">\n' + "\n".join(
+            f'<a href="{item["href"]}">{button_picture(item["key"], item["label"], item["key"] not in shared)}</a>'
+            for item in CONTENT["contact"]
+        ) + "\n</p>",
+        f'<p align="center"><sub>© {person["name"]}</sub></p>',
     ]
     return "\n\n".join(blocks) + "\n"
 
@@ -606,6 +632,13 @@ def render_static(target: Path) -> dict[Path, str]:
         for (theme, layout), (svg, _) in drawn.items():
             if theme == "light" or name not in shared:
                 files[target / "assets" / f"{name}-{theme}-{layout}.svg"] = svg
+    for item in CONTENT["contact"]:
+        drawn = {theme: button(theme, item["label"], item["variant"]) for theme in THEMES}
+        if drawn["light"] == drawn["dark"]:
+            shared.add(item["key"])
+        for theme, svg in drawn.items():
+            if theme == "light" or item["key"] not in shared:
+                files[target / "assets" / f"button-{item['key']}-{theme}.svg"] = svg
     files[target / "README.md"] = readme(alts, shared)
     return files
 

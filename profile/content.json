@@ -7,7 +7,6 @@
     "name": "Shamirkhan Nabil",
     "role": "Enterprise Architect · Engineering Leader",
     "summary": "An enterprise architect with deep communications and cybersecurity foundations, hands-on engineering capability, and experience leading delivery.",
-    "practice": "Innov8 Advisory",
     "website": "https://shamirkhannabil.com",
     "email": "nabil.shamir@innov8advisory.com.au",
     "timezone": "Australia/Perth",
@@ -398,5 +397,19 @@
         "Open-source engineering"
       ]
     ]
-  }
+  },
+  "contact": [
+    {
+      "key": "website",
+      "label": "Website",
+      "href": "https://shamirkhannabil.com",
+      "variant": "primary"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "href": "mailto:nabil.shamir@innov8advisory.com.au",
+      "variant": "outline"
+    }
+  ]
 }
