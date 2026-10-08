@@ -1,0 +1,3 @@
+# Generated from profile/content.json by scripts/render.py
+assets/*.svg linguist-generated=true -diff
+*.woff2 binary

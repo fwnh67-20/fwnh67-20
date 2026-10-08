@@ -1,0 +1,51 @@
+name: Activity
+
+# Refreshes the "Recent activity" card. The card lives on the orphan `activity`
+# branch as a single force-pushed commit, so main keeps a clean history and the
+# refresh adds nothing to the contribution graph.
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ secrets.PROFILE_ACTIVITY_TOKEN }}
+    steps:
+      - name: Require the activity token
+        if: env.GH_TOKEN == ''
+        run: |
+          echo "::warning::PROFILE_ACTIVITY_TOKEN is not set; the activity card keeps its last published state. See docs/maintenance.md."
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: env.GH_TOKEN != ''
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        if: env.GH_TOKEN != ''
+        with:
+          python-version: "3.12"
+      - name: Collect and render
+        if: env.GH_TOKEN != ''
+        run: |
+          python scripts/activity.py "$RUNNER_TEMP/card/activity.json"
+          python scripts/render.py --activity "$RUNNER_TEMP/card/activity.json" --out "$RUNNER_TEMP/card"
+      - name: Publish to the activity branch
+        if: env.GH_TOKEN != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --quiet --orphan activity
+          git rm -rf --quiet .
+          cp "$RUNNER_TEMP"/card/activity-*.svg "$RUNNER_TEMP"/card/activity.json .
+          git add activity-*.svg activity.json
+          git commit --quiet -m "Refresh activity card"
+          git push --force --quiet origin activity
