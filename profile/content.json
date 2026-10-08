@@ -128,7 +128,7 @@
   },
   "activity": {
     "kicker": "Recent activity",
-    "note": "Client work lives in private repositories. These figures are aggregated across them; nothing is named."
+    "note": "These figures are aggregated across private repositories."
   },
   "career": {
     "title": "Career.",

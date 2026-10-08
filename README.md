@@ -11,7 +11,7 @@
   <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fwnh67-20/fwnh67-20/activity/activity-dark-narrow.svg">
   <source media="(max-width: 640px)" srcset="https://raw.githubusercontent.com/fwnh67-20/fwnh67-20/activity/activity-light-narrow.svg">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fwnh67-20/fwnh67-20/activity/activity-dark-wide.svg">
-  <img src="https://raw.githubusercontent.com/fwnh67-20/fwnh67-20/activity/activity-light-wide.svg" width="100%" alt="Recent activity: when I last worked and how much, aggregated across private client repositories.">
+  <img src="https://raw.githubusercontent.com/fwnh67-20/fwnh67-20/activity/activity-light-wide.svg" width="100%" alt="Recent activity: when I last worked and how much, aggregated across private repositories.">
 </picture>
 
 <picture>
