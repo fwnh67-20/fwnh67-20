@@ -468,38 +468,6 @@ def glance(theme: str, layout: str) -> tuple[str, str]:
     return c.svg(height + 8, alt), alt
 
 
-def career(theme: str, layout: str) -> tuple[str, str]:
-    s, c = Scale(layout), Canvas(LAYOUTS[layout], theme)
-    t, roles = c.t, CONTENT["career"]["roles"]
-    y = display_title(c, s, 0, s.section_gap, CONTENT["career"]["title"], t["primary"], s.width) + (16 if s.narrow else 32)
-    rail = 8 if s.narrow else 185
-    card_x = 32 if s.narrow else 215
-    card_w = s.width - card_x
-    line_marker = c.mark()
-    first_dot = last_dot = None
-    for role in roles:
-        row = y
-        if s.narrow:
-            y = c.paragraph(card_x, y, role["period"], "bold", 13, 20, t["tertiary"], card_w) + 6
-            dot = row + 10
-        else:
-            c.text(0, baseline(y + 18, "bold", 14, 20), role["period"], "bold", 14, t["tertiary"])
-            dot = row + 28
-        background = c.mark()
-        pad = 18 if s.narrow else 22
-        cy = c.paragraph(card_x + pad, y + 18, role["title"], "bold", 20 if s.narrow else 22, 27, t["primary"], card_w - pad * 2)
-        cy = c.paragraph(card_x + pad, cy + 6, role["region"], "text", 14, 20, t["link"], card_w - pad * 2)
-        cy = c.paragraph(card_x + pad, cy + 4, role["scope"], "text", 14, 20, t["tertiary"], card_w - pad * 2) + 18
-        c.rect(card_x, y, card_w, cy - y, t["subtle"], radius=16, at=background)
-        c.circle(rail, dot, 6.5, t["screen"], "#8ecbff", 3)
-        first_dot = first_dot if first_dot is not None else dot
-        last_dot = dot
-        y = cy + (16 if s.narrow else 12)
-    c.rect(rail - 2, first_dot, 4, last_dot - first_dot, "#8ecbff", radius=2, at=line_marker)
-    alt = "Career. " + " ".join(f"{r['period']}: {r['title']}, {r['region']}. {r['scope']}." for r in roles)
-    return c.svg(y + 8, alt), alt
-
-
 def engagement_card(c: Canvas, x, y, w, item, height=None) -> float:
     pad = 24
     inner = w - pad * 2
@@ -580,7 +548,6 @@ SECTIONS = {
     "method": method,
     "expertise": expertise,
     "glance": glance,
-    "career": career,
     "engagements": engagements,
     "credentials": credentials,
 }
@@ -615,15 +582,6 @@ def readme(alts: dict[str, str], shared: set[str]) -> str:
         picture("assets/", "method", alts["method"], "method" not in shared),
         picture("assets/", "expertise", alts["expertise"], "expertise" not in shared),
         picture("assets/", "glance", alts["glance"], "glance" not in shared),
-        picture("assets/", "career", alts["career"], "career" not in shared),
-    ]
-    details = ["<details>", "<summary><b>Role details</b></summary>", ""]
-    for role in CONTENT["career"]["roles"]:
-        details += [f"#### {role['title']} · {role['region']}", f"<sub>{role['period']}</sub>", ""]
-        details += [f"- {bullet}" for bullet in role["bullets"]] + [""]
-    details.append("</details>")
-    blocks.append("\n".join(details))
-    blocks += [
         picture("assets/", "engagements", alts["engagements"], "engagements" not in shared),
         picture("assets/", "credentials", alts["credentials"], "credentials" not in shared),
         "---",

@@ -20,22 +20,42 @@
       {
         "word": "Communications.",
         "desc": "Enterprise communications, 5G and LTE networking, and VoIP.",
-        "chips": ["Wireless & Mesh Design", "Private 5G", "Unified Voice", "Network Resilience"]
+        "chips": [
+          "Wireless & Mesh Design",
+          "Private 5G",
+          "Unified Voice",
+          "Network Resilience"
+        ]
       },
       {
         "word": "Cybersecurity.",
         "desc": "Intrusion prevention, threat and rogue-device analysis, packet-level investigation, offensive security and pentesting.",
-        "chips": ["Wireless Defence", "Threat Hunting", "Network Forensics", "Red Teaming"]
+        "chips": [
+          "Wireless Defence",
+          "Threat Hunting",
+          "Network Forensics",
+          "Red Teaming"
+        ]
       },
       {
         "word": "Applications & Systems.",
         "desc": "Custom intelligence and enhanced applications, platform support, and infrastructure integration.",
-        "chips": ["Scalable Systems", "Kubernetes", "Event Streams", "Docker"]
+        "chips": [
+          "Scalable Systems",
+          "Kubernetes",
+          "Event Streams",
+          "Docker"
+        ]
       },
       {
         "word": "Automation & AI.",
         "desc": "RFID, RTLS, edge-to-cloud integration, automation, AI governance, LLM integration, local inference and bounded agentic workflows.",
-        "chips": ["Asset Visibility", "Process Automation", "Responsible AI", "On-Premise AI"]
+        "chips": [
+          "Asset Visibility",
+          "Process Automation",
+          "Responsible AI",
+          "On-Premise AI"
+        ]
       }
     ]
   },
@@ -73,167 +93,161 @@
       {
         "kicker": "Consulting & Advisory",
         "title": "From Discovery to Delivery",
-        "skills": ["Business Discovery", "Functional Requirements", "Solution Blueprints", "Integration Design", "Transition Planning", "SOWs · LOEs · BOMs", "Executive Communication"]
+        "skills": [
+          "Business Discovery",
+          "Functional Requirements",
+          "Solution Blueprints",
+          "Integration Design",
+          "Transition Planning",
+          "SOWs · LOEs · BOMs",
+          "Executive Communication"
+        ]
       },
       {
         "kicker": "Communications & Networks",
         "title": "Enterprise & Outdoor Networking",
-        "skills": ["Enterprise Wireless", "Outdoor Mesh", "RF Engineering", "Private 5G & LTE", "Wired Networking", "WiNG 5", "MeshConnex", "Unified Voice & VoIP", "PBX Integration"]
+        "skills": [
+          "Enterprise Wireless",
+          "Outdoor Mesh",
+          "RF Engineering",
+          "Private 5G & LTE",
+          "Wired Networking",
+          "WiNG 5",
+          "MeshConnex",
+          "Unified Voice & VoIP",
+          "PBX Integration"
+        ]
       },
       {
         "kicker": "Cybersecurity",
         "title": "Intrusion Prevention & Infrastructure Hardening",
-        "skills": ["Wireless Intrusion Prevention", "AirDefense (ADSP)", "Threat & Rogue Device Analysis", "Firewall Architecture", "Secure Web Proxy", "Network Segmentation", "Vulnerability Assessment", "Penetration Testing", "Red Teaming", "Packet & Protocol Forensics"]
+        "skills": [
+          "Wireless Intrusion Prevention",
+          "AirDefense (ADSP)",
+          "Threat & Rogue Device Analysis",
+          "Firewall Architecture",
+          "Secure Web Proxy",
+          "Network Segmentation",
+          "Vulnerability Assessment",
+          "Penetration Testing",
+          "Red Teaming",
+          "Packet & Protocol Forensics"
+        ]
       },
       {
         "kicker": "Enterprise Mobility",
         "title": "Devices, Fleets & Management",
-        "skills": ["Android Enterprise", "Device & App Troubleshooting", "OS & Firmware", "Mobile Device Management", "Fleet Rollouts", "Workforce Connect", "Push to Talk & Voice"]
+        "skills": [
+          "Android Enterprise",
+          "Device & App Troubleshooting",
+          "OS & Firmware",
+          "Mobile Device Management",
+          "Fleet Rollouts",
+          "Workforce Connect",
+          "Push to Talk & Voice"
+        ]
       },
       {
         "kicker": "Software & Data",
         "title": "Robust, Resilient, Built to Last",
-        "skills": ["Application Architecture", "API & Integration Design", "Real Time Messaging", "Event Streaming", "Enterprise Integration Patterns", "Search & Analytics", "Mobile & Web Apps", "Code Quality & Testing"]
+        "skills": [
+          "Application Architecture",
+          "API & Integration Design",
+          "Real Time Messaging",
+          "Event Streaming",
+          "Enterprise Integration Patterns",
+          "Search & Analytics",
+          "Mobile & Web Apps",
+          "Code Quality & Testing"
+        ]
       },
       {
         "kicker": "Cloud & Infrastructure",
         "title": "Scalable, Observable, Secure",
-        "skills": ["Cloud Architecture", "Hybrid & Edge", "Containerisation", "Container Orchestration", "Virtualisation", "Infrastructure as Code", "Monitoring & Observability", "Linux Systems"]
+        "skills": [
+          "Cloud Architecture",
+          "Hybrid & Edge",
+          "Containerisation",
+          "Container Orchestration",
+          "Virtualisation",
+          "Infrastructure as Code",
+          "Monitoring & Observability",
+          "Linux Systems"
+        ]
       },
       {
         "kicker": "RFID & Automation",
         "title": "Tag to Cloud",
-        "skills": ["Passive UHF RFID", "RTLS", "Antenna & Reader Engineering", "Tag Filtering", "Fixed Reader Deployments", "Edge to Cloud Integration", "Asset Visibility"]
+        "skills": [
+          "Passive UHF RFID",
+          "RTLS",
+          "Antenna & Reader Engineering",
+          "Tag Filtering",
+          "Fixed Reader Deployments",
+          "Edge to Cloud Integration",
+          "Asset Visibility"
+        ]
       },
       {
         "kicker": "AI & Automation",
         "title": "Practical AI for Operations",
-        "skills": ["LLM Integration", "Local Inference", "Model Context Protocol", "Scoped Agent Workflows", "Human Oversight", "Evidence Before Go Live", "Technical Mentoring", "Delivery Leadership"]
+        "skills": [
+          "LLM Integration",
+          "Local Inference",
+          "Model Context Protocol",
+          "Scoped Agent Workflows",
+          "Human Oversight",
+          "Evidence Before Go Live",
+          "Technical Mentoring",
+          "Delivery Leadership"
+        ]
       }
     ]
   },
   "glance": {
     "kicker": "At a glance",
     "runs": [
-      ["Developing OSS since ", false],
-      ["2007", true],
-      [". ", false],
-      ["13 years", true],
-      [" in enterprise technology. ", false],
-      ["19 years", true],
-      [" of engineering. Mines, rail, retail and semiconductors across ", false],
-      ["Asia Pacific, Australia, New Zealand, USA", true],
-      [".", false]
+      [
+        "Developing OSS since ",
+        false
+      ],
+      [
+        "2007",
+        true
+      ],
+      [
+        ". ",
+        false
+      ],
+      [
+        "13 years",
+        true
+      ],
+      [
+        " in enterprise technology. ",
+        false
+      ],
+      [
+        "19 years",
+        true
+      ],
+      [
+        " of engineering. Mines, rail, retail and semiconductors across ",
+        false
+      ],
+      [
+        "Asia Pacific, Australia, New Zealand, USA",
+        true
+      ],
+      [
+        ".",
+        false
+      ]
     ]
   },
   "activity": {
     "kicker": "Recent activity",
     "note": "These figures are aggregated across private repositories."
-  },
-  "career": {
-    "title": "Career.",
-    "roles": [
-      {
-        "period": "Mar 2026 – Present",
-        "region": "Australia",
-        "title": "Enterprise Architect",
-        "scope": "Running my own practice and taking clients from business case through to delivery",
-        "bullets": [
-          "Collaborating with leadership and engineering teams to turn operational problems into solutions with clear architecture, a costed plan and a delivery path.",
-          "Designing and architecting end-to-end tracking solutions, including solution blueprints, integration boundaries, transition plans, statements of work and effort estimates.",
-          "Hands-on delivery, building and troubleshooting applications, platforms and cloud-to-edge systems.",
-          "Recent work includes fleet tracking and energy monitoring platforms."
-        ]
-      },
-      {
-        "period": "Oct 2023 – Mar 2026",
-        "region": "Asia Pacific, Australia & New Zealand",
-        "title": "Engineering Manager",
-        "scope": "Leading the engineering team and owning the toughest customer escalations",
-        "bullets": [
-          "Managed engineers, technical priorities and customer escalations while balancing team delivery with stakeholder and management responsibilities.",
-          "Provided end-to-end consulting across enterprise applications, AI, communications, mobility, RFID and automation.",
-          "Stayed close to the work by taking part in engineering decisions and holding the team to a high standard of delivery quality."
-        ]
-      },
-      {
-        "period": "Oct 2016 – Oct 2023",
-        "region": "Asia Pacific, Australia & New Zealand",
-        "title": "Senior Systems Engineer",
-        "scope": "Specialist on site for mining, retail and industrial rollouts",
-        "bullets": [
-          "Provided consulting and escalation support on site for communications, mobility and industrial deployments.",
-          "Connected customer requirements with firmware and network investigations to find the root cause.",
-          "Supported Android Enterprise devices and applications from Jelly Bean through Oreo and later releases.",
-          "Investigated operating system and firmware issues, device and network interoperability, and MDM problems with SOTI, 42Gears and Intune.",
-          "Supported Workforce Connect enterprise VoIP and PBX integration and applied WiNG, MeshConnex and ADSP expertise in customer environments.",
-          "Designed and supported mining communications for autonomous haulage (AHS) and manned fleets at major Western Australian iron ore operations.",
-          "Also delivered RFID and automation advisory."
-        ]
-      },
-      {
-        "period": "May 2015 – Oct 2016",
-        "region": "Asia Pacific, Australia & New Zealand",
-        "title": "Technical Systems Engineer II",
-        "scope": "Testing new products and rebuilding customer networks in the lab to find root causes",
-        "bullets": [
-          "Grew coverage from Australia and New Zealand to the wider Asia Pacific region.",
-          "Consulted on wired and wireless deployments and on WiNG 5, MeshConnex and ADSP interoperability with other networking vendors.",
-          "Validated engineering builds, beta releases and new product introductions (NPI).",
-          "Recreated customer networks in VeriWave and IxChariot test environments with regression scripting.",
-          "Investigated firmware defects and performance issues together with engineering.",
-          "Rebuilt internal and external WLAN knowledge sharing into reusable diagnostic guidance."
-        ]
-      },
-      {
-        "period": "Oct 2014 – May 2015",
-        "region": "Australia & New Zealand",
-        "title": "Technical Systems Engineer",
-        "scope": "Trusted expert for wireless security and secure network rollouts",
-        "bullets": [
-          "Served as the WiNG and ADSP subject matter expert.",
-          "Advised on WIPS operation, wireless threat detection and prevention, rogue device investigation and secure WLAN deployment.",
-          "Used packet and network analysis to guide troubleshooting.",
-          "Trained support and test engineering staff and led their technical development after the enterprise business changed hands."
-        ]
-      },
-      {
-        "period": "Feb 2014 – Oct 2014",
-        "region": "Australia & New Zealand",
-        "title": "Customer Operations Engineer",
-        "scope": "Lead on network and radio cases for government and mining customers",
-        "bullets": [
-          "Managed communications, network cases and software investigations for Australia and New Zealand within Customer Response Engineering.",
-          "Served as the MeshConnex subject matter expert for enterprise and public systems customers.",
-          "Supported ASTRO, TETRA and DIMETRA, iDEN, WiMAX, WiNG, MOTOMESH and MeshConnex, and ADSP.",
-          "Handled radio upgrades and troubleshooting for confidential government and mining customers, along with transitional Canopy and legacy handheld support.",
-          "Joined the RFID reader development group and contributed to tag reading techniques and read reliability investigations."
-        ]
-      },
-      {
-        "period": "Feb 2013 – Feb 2014",
-        "region": "Singapore & Malaysia",
-        "title": "Technical Support Engineer",
-        "scope": "Hands-on support across servers, storage, networking and security",
-        "bullets": [
-          "Supported small business and premium support customers across client systems, workstations, servers, storage and switching.",
-          "Covered virtual machine infrastructure and provided dedicated firewall support.",
-          "Owned diagnostic analysis, case records and engineering escalations.",
-          "Provided on-site support for critical customers across compute, storage, networking and security."
-        ]
-      },
-      {
-        "period": "Nov 2011 – Jan 2013",
-        "region": "Malaysia",
-        "title": "Pharmacist",
-        "scope": "Clinical consultations and pharmacy operations",
-        "bullets": [
-          "Delivered medication consultations for infectious disease, with guidance on drug use and mechanisms of action.",
-          "Prepared extemporaneous medicines and managed inpatient and outpatient pharmacy operations and inventory.",
-          "Reviewed clinical cases and drug utilisation statistics to find cost savings and operational efficiencies."
-        ]
-      }
-    ]
   },
   "engagements": {
     "kicker": "Engagements",
@@ -243,84 +257,119 @@
         "name": "Major Mining Consortium",
         "where": "Australia",
         "when": "2026",
-        "tags": ["Architecture", "Applications"],
+        "tags": [
+          "Architecture",
+          "Applications"
+        ],
         "desc": "Architecture and application work for fleet visibility and energy monitoring platforms, covering Android and web interfaces, telemetry, integrations and operational workflows."
       },
       {
         "name": "Global Semiconductor Manufacturer",
         "where": "Singapore",
         "when": "2020 – Present",
-        "tags": ["RFID", "Automation"],
+        "tags": [
+          "RFID",
+          "Automation"
+        ],
         "desc": "RFID and automation consulting and engineering support across reader and tag behaviour, solution design and operational integration."
       },
       {
         "name": "Semiconductor Process Control Company",
         "where": "Singapore",
         "when": "",
-        "tags": ["RFID", "Transition planning"],
+        "tags": [
+          "RFID",
+          "Transition planning"
+        ],
         "desc": "Designed the RFID solution blueprint, business plan and business transition plan, linking the technical build with operational change."
       },
       {
         "name": "National Supermarket Chain",
         "where": "Australia",
         "when": "2019",
-        "tags": ["VoIP", "Retail"],
+        "tags": [
+          "VoIP",
+          "Retail"
+        ],
         "desc": "Integrated Workforce Connect enterprise VoIP with the existing PBX, connecting in-store mobile devices with business telephony."
       },
       {
         "name": "Major Mining Consortium",
         "where": "Western Australia",
         "when": "2016 – 2020",
-        "tags": ["MeshConnex", "Mining"],
+        "tags": [
+          "MeshConnex",
+          "Mining"
+        ],
         "desc": "Post-deployment support, upgrades and troubleshooting for outdoor MeshConnex networks serving autonomous and manned haulage fleets."
       },
       {
         "name": "Major Mining Consortium (US Operations)",
         "where": "Arizona, USA",
         "when": "2016 – 2020",
-        "tags": ["MeshConnex", "Mining"],
+        "tags": [
+          "MeshConnex",
+          "Mining"
+        ],
         "desc": "Post-deployment support, upgrades and troubleshooting for outdoor MeshConnex networks serving autonomous and manned haulage fleets."
       },
       {
         "name": "Regional Retail Mall Operator",
         "where": "Singapore",
         "when": "2016 – 2018",
-        "tags": ["WLAN", "ADSP"],
+        "tags": [
+          "WLAN",
+          "ADSP"
+        ],
         "desc": "Supported guest WLAN rollouts across malls and the wider property portfolio, including location-based services and deployment troubleshooting."
       },
       {
         "name": "Iron Ore Mining Company",
         "where": "Western Australia",
         "when": "2017",
-        "tags": ["MeshConnex", "Mining"],
+        "tags": [
+          "MeshConnex",
+          "Mining"
+        ],
         "desc": "Post-deployment MeshConnex network support, upgrades and troubleshooting for mining operations."
       },
       {
         "name": "Leading Cement Manufacturer",
         "where": "India",
         "when": "2016 – 2017",
-        "tags": ["MeshConnex", "Industrial"],
+        "tags": [
+          "MeshConnex",
+          "Industrial"
+        ],
         "desc": "Pre-deployment support for outdoor MeshConnex networking in an industrial operating environment."
       },
       {
         "name": "Metropolitan Rail Network",
         "where": "Western Australia",
         "when": "2014 – 2016",
-        "tags": ["MeshConnex", "Transport"],
+        "tags": [
+          "MeshConnex",
+          "Transport"
+        ],
         "desc": "Deployment support for outdoor MeshConnex rail networks."
       },
       {
         "name": "Major Mining Consortium",
         "where": "Western Australia",
         "when": "2015",
-        "tags": ["MeshConnex", "Mining"],
+        "tags": [
+          "MeshConnex",
+          "Mining"
+        ],
         "desc": "Supported outdoor MeshConnex network deployments for mining operations."
       },
       {
         "name": "Airport Guest Wireless",
         "where": "Christchurch, New Zealand",
         "when": "2015",
-        "tags": ["Guest wireless"],
+        "tags": [
+          "Guest wireless"
+        ],
         "desc": "Guest wireless project in Christchurch, New Zealand."
       }
     ]
@@ -328,11 +377,26 @@
   "credentials": {
     "title": "Credentials & Education.",
     "items": [
-      ["CWNE", "Certified Wireless Network Expert"],
-      ["ITIL 2011", "IT service management"],
-      ["B.Sc. Computer Science", "Charter University"],
-      ["Diploma in Pharmacy", "Mara University of Technology"],
-      ["Since 2007", "Open-source engineering"]
+      [
+        "CWNE",
+        "Certified Wireless Network Expert"
+      ],
+      [
+        "ITIL 2011",
+        "IT service management"
+      ],
+      [
+        "B.Sc. Computer Science",
+        "Charter University"
+      ],
+      [
+        "Diploma in Pharmacy",
+        "Mara University of Technology"
+      ],
+      [
+        "Since 2007",
+        "Open-source engineering"
+      ]
     ]
   }
 }

@@ -4,7 +4,7 @@ The profile README and every section image are generated. Edit the content, not 
 
 | Path | Role |
 | --- | --- |
-| `profile/content.json` | All copy: role, practice, method, expertise, career, engagements, credentials |
+| `profile/content.json` | All copy: role, practice, method, expertise, engagements, credentials |
 | `scripts/render.py` | Draws each section as SVG in the Tidal design system and writes `README.md` |
 | `scripts/activity.py` | Aggregates GitHub activity for the "Recent activity" card |
 | `scripts/fonts.py` | One-off: subsets Inter / Inter Tight and records advance widths |
